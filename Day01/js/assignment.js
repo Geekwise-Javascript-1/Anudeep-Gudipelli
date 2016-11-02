@@ -10,9 +10,9 @@ Console log answer.*/
 
 //Concatination is nothing but adding 2 strings together
 
-var x = 12;
-var y = 30;
-var a = "Answer Equals:";
-var z = x + y;
-var answer = a + z;
+var a = 12;
+var b = 30;
+var c = "Answer Equals:";
+var d = a + b;
+var answer = c + d;
 console.log(answer)
