@@ -1,0 +1,50 @@
+/*
+*
+* Music Control styles
+*
+*/
+#controls {display: inline-flex;}
+#controls #label {
+    display: inline-block;
+    width: 0px;
+    height: 20px;
+    margin: 0 5px;
+    background-image: linear-gradient(to bottom, hsl(7, 69%, 25%), hsl(7, 69%, 20%));
+    border-radius: 10px;
+    transition: width 150ms ease-out;
+}
+#controls #label::before,
+#controls #label::after {
+    font-size: 10px;
+    text-shadow: 1px 1px 1px hsl(7, 69%, 15%);
+    line-height: 2;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+}
+#controls #label::before {content: 'Stop Music';}
+#controls #label::after {content: 'Play Music';}
+#controls:hover #label {width: 65px;}
+#controls #label::before,
+#controls #label::after,
+#controls.stopped:hover #label::before {display: none;}
+#controls:hover #label::before {display: block;}
+#controls.stopped:hover #label::after {display: block;}
+#controls > i, #controls #label::before, #controls #label::after {cursor: default;}
+#controls #audioToggle {cursor: pointer;}
+#controls i {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px hsl(7, 69%, 15%);
+}
+#controls #audioToggle {position: relative;}
+#controls #audioToggle i:last-child {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+#controls.stopped #audioToggle i:first-child {opacity: 0;}
+#controls.stopped #audioToggle i:last-child {opacity: 1;}

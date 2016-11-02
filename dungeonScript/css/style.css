@@ -1,0 +1,179 @@
+@import 'https://fonts.googleapis.com/css?family=Uncial+Antiqua';
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-image: url(../img/dangerous-cave.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+/*
+*
+* Header styles
+*
+*/
+header {
+    background-image: linear-gradient(to bottom, hsl(7, 69%, 35%), hsl(7, 69%, 25%));
+    border-bottom: 1px solid hsl(7, 69%, 15%);
+    color: hsl(0, 0%, 95%);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+h1 {
+    font-family: 'Uncial Antiqua', cursive;
+    margin: 0 auto 0 0;
+    text-shadow: 1px 1px 1px hsl(7, 69%, 15%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 1.25;
+}
+
+
+
+/*
+*
+* Main styles
+*
+*/
+main {
+    flex: 1;
+    display: flex;
+}
+section#table {
+    flex: 2;
+    display: flex;
+    padding: 5vw;
+}
+section#nav {
+    flex: 1;
+    display: flex;
+}
+@media screen and (max-width: 768px){
+    main {
+        flex-direction: column;
+    }
+}
+
+/*
+*
+* Table styles
+*
+*/
+table {
+    width: 75vh;
+    height: 75vh;
+    margin: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: hsla(0, 0%, 19%, 1);
+    box-shadow: 0 0 0 6px hsla(0, 0%, 100%, .5);
+}
+@media screen and (max-width: 768px){
+    table {
+        width: 55vh;
+        height: 55vh;
+    }
+}
+table tbody {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+table tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(100% / 8);
+    background-image: url(../img/dirt-texture.png);
+    background-size: 100%;
+}
+table td {
+    height: 100%;
+    width: calc(100% / 8);
+    background-color: hsla(0, 0%, 1%, 1);
+    border: 0px solid black;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+table td.visited {
+    background-color: hsla(7, 69%, 20%, .75);
+}
+table td.active {
+    background-color: hsla(0, 0%, 100%, .75);
+}
+table td.exit {
+    background-color: hsla(0, 50%, 50%, .75);
+}
+
+table td.bt {border-top-width: 2px;}
+table td.br {border-right-width: 2px;}
+table td.bb {border-bottom-width: 2px;}
+table td.bl {border-left-width: 2px;}
+
+/*
+*
+* Navigation styles
+*
+*/
+section#nav nav {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#nav span {
+    display: flex;
+    align-items: center;
+}
+section#nav button {
+    color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 9%);
+    border: none;
+    box-shadow: 0 0 0 3px hsla(0, 0%, 100%, .5);
+    padding: 10px 20px;
+    margin: 5px 30px;
+    text-shadow: black;
+}
+section#nav button::first-letter {
+    text-transform: uppercase;
+}
+section#nav img {
+    width: 45px;
+    height: auto;
+}
+
+/*
+*
+* Footer styles
+*
+*/
+footer {
+    color: hsl(0, 0%, 50%);
+    background-color: hsla(0, 0%, 4%, .85);
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid hsl(0, 0%, 0%);
+}
+footer p {
+    margin: 0;
+    text-shadow: 1px 1px 1px hsl(0, 0%, 0%);
+}
+footer i {color: hsl(0, 45%, 52%);}
+footer img {
+    display: inline-block;
+    width: 12px;
+    height: auto;
+    position: relative;
+    top: 2px;
+}
