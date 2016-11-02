@@ -8,6 +8,8 @@ Add the first two numeric variables together using the + operator, save this to 
 Concatenate the string from your third variable with the number from your fourth (new) variable. Save this to a new variable called "answer".
 Console log answer.*/
 
+//Concatination is nothing but adding 2 strings together
+
 var x = 12;
 var y = 30;
 var a = "Answer Equals:";
