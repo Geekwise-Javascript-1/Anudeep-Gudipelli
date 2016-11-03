@@ -101,7 +101,7 @@ table tr {
 table td {
     height: 100%;
     width: calc(100% / 8);
-    background-color: hsla(0, 0%, 1%, 1);
+    background-color: hsla(0, 0%, 1%, 0.25);
     border: 0px solid black;
     box-sizing: border-box;
     border-radius: 4px;
