@@ -1,5 +1,8 @@
-/*
-The first two should store the numbers:
+/* Anudeep Gudipelli 
+Date : November 02, 2016, 
+Javascript1
+
+Question: The first two should store the numbers:
 values 12
 and 30
 (for an extra challenge... convert 30 into a hexadecimal)
@@ -11,8 +14,10 @@ Console log answer.*/
 //Concatination is nothing but adding 2 strings together
 
 var a = 12;
-var b = 30;
+//var b = 30;
+var b = parseInt('0x'+(30).toString(16));
 var c = "Answer Equals:";
 var d = a + b;
 var answer = c + d;
 console.log(answer)
+
