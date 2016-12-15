@@ -38,8 +38,7 @@ var maze, cells, thisCell, exitCell;
 
 var n = document.getElementById('n');
 n.addEventListener( 'click', function(){
-     //console.log('North');
-     moveNorth();
+         moveNorth();
 });
 
 var e = document.getElementById('e');
@@ -57,9 +56,7 @@ w.addEventListener( 'click', function(){
     moveWest();
 });
 
-
 function moveNorth(){
-       //console.log('moving North');
        statusCell(thisCell, 'inactive' );
        thisCell = [ thisCell[0]-1, thisCell[1] ];
        statusCell(thisCell, 'active');
@@ -67,24 +64,21 @@ function moveNorth(){
        encounter();
 }
 function moveEast(){
-       //console.log('moving east');
-       statusCell(thisCell, 'inactive');
+              statusCell(thisCell, 'inactive');
        thisCell = [ thisCell[0], thisCell[1]+1 ];
        statusCell(thisCell, 'active');
        checkWalls();
        encounter();
 }
 function moveSouth(){
-       //console.log('moving south');
-       statusCell(thisCell, 'inactive');
+             statusCell(thisCell, 'inactive');
        thisCell = [ thisCell[0]+1, thisCell[1] ];
        statusCell(thisCell, 'active');
        checkWalls();
        encounter();
 }
 function moveWest(){
-       //console.log('moving west');
-       statusCell(thisCell, 'inactive');
+             statusCell(thisCell, 'inactive');
        thisCell = [ thisCell[0], thisCell[1]-1 ];
        statusCell(thisCell, 'active');
        checkWalls();
@@ -92,8 +86,7 @@ function moveWest(){
 }
 
 addEventListener('keydown', function(evt){
-       //console.log(evt);
-       evt.preventDefault();
+              evt.preventDefault();
        if( (evt.keyCode === 87 || evt.keyCode === 38) && !n.disabled){
            moveNorth();
        }else if( (evt.keyCode === 68 || evt.keyCode === 39) && !e.disabled ){
@@ -200,15 +193,12 @@ function statusCell(cell, status){
 function gridBuilder(){
       maze = document.createElement('table');
       tableHolder.appendChild(maze);
-      //console.log(tableHolder);
-
-      for( i = 0; i < cells.length; i++ ){
+            for( i = 0; i < cells.length; i++ ){
          maze.insertRow(i);
 
          for( j = 0; j < cells.length; j++ ){
             maze.firstChild.childNodes[i].insertCell(j);
             thisCell = maze.firstChild.childNodes[i].childNodes[j];
-              //console.log(thisCell);
 
               for ( var k = 0; k < 4; k++ ){
                  switch(k)  {
@@ -240,23 +230,23 @@ function gridBuilder(){
 
 function checkWalls(){
     var walls = cells[ thisCell[0] ][ thisCell[1] ];
-    //console.log(walls);
+
     for( var i = 0; i < 4; i++ ){
         switch( i ){
            case 0:
-              //console.log(walls[i]);
+
               walls[i] ? n.disabled = false : n.disabled = true;
               break;
            case 1:
-              //console.log(walls[i]);
+
               walls[i] ? e.disabled = false : e.disabled = true;
               break;
            case 2:
-               //console.log(walls[i]);
+
                walls[i] ? s.disabled = false : s.disabled = true;
                break;
            case 3:
-                //console.log(walls[i]);
+
                 walls[i] ? w.disabled = false : w.disabled = true;
                 break;
 
@@ -277,9 +267,7 @@ function encounter(){
   if(chanceEnc <= probEnc){
       console.log('you ran into a baddie!');
       monster = monsters.splice(Math.floor(Math.random * monsters.length), 1)[0];
-      // console.log(monster);
-      // console.log(monsters);
-      alert('You have encountered ' + monster.name +' !!');
+            alert('You have encountered ' + monster.name +' !!');
       battle(monster);
   }
 }
