@@ -148,6 +148,16 @@ section#nav button {
 section#nav button::first-letter {
     text-transform: uppercase;
 }
+section#nav button:hover{
+   background-color: hsla(0, 0%, 100%, 1);
+   color: black;
+}
+section#nav button:disabled{
+    color: hsla(0, 0%, 0%, .85);
+    background-color: hsla(0, 0%, 50%, .35);
+    border-color: hsla(0, 0%, 50%, .85);
+    cursor: default;
+}
 section#nav img {
     width: 45px;
     height: auto;
